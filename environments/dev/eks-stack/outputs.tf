@@ -41,4 +41,3 @@ output "private_subnet_ids" {
   description = "Private subnet IDs used by EKS"
   value       = var.private_subnet_ids
 }
-
