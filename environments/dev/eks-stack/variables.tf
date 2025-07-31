@@ -53,29 +53,16 @@ variable "infra_enable_public_api" {
   default     = false
 }
 
-variable "vpc_id" {
-  description = "VPC ID for the EKS cluster"
-  type        = string
-}
-
-variable "private_subnet_ids" {
-  description = "Private subnet IDs"
-  type        = list(string)
-}
-
-variable "public_subnet_ids" {
-  description = "Public subnet IDs"
-  type        = list(string)
-}
-
 variable "control_plane_iam_role_arn" {
   description = "IAM role ARN for EKS control plane"
   type        = string
+  default     = null
 }
 
 variable "node_group_iam_role_arn" {
   description = "IAM role ARN for EKS node group"
   type        = string
+  default     = null
 }
 
 variable "infra_enable_ondemand_nodes" {
